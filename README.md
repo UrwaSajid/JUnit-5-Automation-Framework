@@ -6,6 +6,9 @@ A complete **Advanced JUnit 5 Automation Framework** built on top of a Student M
 
 ---
 
+<img width="1013" height="249" alt="image" src="https://github.com/user-attachments/assets/36a61ed7-048d-4510-990c-2cae05413be1" />
+
+
 ##  Project Structure
 
 ```
