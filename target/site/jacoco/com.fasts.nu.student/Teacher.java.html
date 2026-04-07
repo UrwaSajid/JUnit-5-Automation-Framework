@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Teacher.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Student Management System</a> &gt; <a href="index.source.html" class="el_package">com.fasts.nu.student</a> &gt; <span class="el_source">Teacher.java</span></div><h1>Teacher.java</h1><pre class="source lang-java linenums">package com.fasts.nu.student;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Teacher {
+
+    private String teacherId;
+    private String name;
+    private String email;
+    private List&lt;Course&gt; coursesTaught;
+
+    // Constructor
+<span class="fc" id="L14">    public Teacher(String teacherId, String name, String email) {</span>
+<span class="fc" id="L15">        this.teacherId = teacherId;</span>
+<span class="fc" id="L16">        this.name = name;</span>
+<span class="fc" id="L17">        this.email = email;</span>
+<span class="fc" id="L18">        this.coursesTaught = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L19">    }</span>
+
+    // Getters
+<span class="fc" id="L22">    public String getTeacherId() { return teacherId; }</span>
+<span class="fc" id="L23">    public String getName() { return name; }</span>
+<span class="fc" id="L24">    public String getEmail() { return email; }</span>
+<span class="fc" id="L25">    public List&lt;Course&gt; getCoursesTaught() { return coursesTaught; }</span>
+
+    // Add course to teacher's list
+    public void addCourse(Course course) {
+<span class="fc" id="L29">        coursesTaught.add(course);</span>
+<span class="fc" id="L30">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L34">        return &quot;Teacher{&quot; +</span>
+<span class="nc" id="L35">                &quot;teacherId='&quot; + teacherId + '\'' +</span>
+<span class="nc" id="L36">                &quot;, name='&quot; + name + '\'' +</span>
+<span class="nc" id="L37">                &quot;, email='&quot; + email + '\'' +</span>
+<span class="nc" id="L38">                &quot;, coursesTaught=&quot; + coursesTaught.size() +</span>
+<span class="nc" id="L39">                '}';</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

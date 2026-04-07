@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>StudentManagementSystem.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Student Management System</a> &gt; <a href="index.source.html" class="el_package">com.fasts.nu.student</a> &gt; <span class="el_source">StudentManagementSystem.java</span></div><h1>StudentManagementSystem.java</h1><pre class="source lang-java linenums">package com.fasts.nu.student;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class StudentManagementSystem {
+
+    private List&lt;Student&gt; students;
+    private List&lt;Course&gt; courses;
+    private List&lt;Teacher&gt; teachers;
+    private List&lt;Enrollment&gt; enrollments;
+    private List&lt;Grade&gt; grades;
+
+    // Constructor
+<span class="fc" id="L15">    public StudentManagementSystem() {</span>
+<span class="fc" id="L16">        this.students = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L17">        this.courses = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L18">        this.teachers = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L19">        this.enrollments = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L20">        this.grades = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L21">    }</span>
+
+    // Add Student
+    public void addStudent(Student student) {
+<span class="fc" id="L25">        students.add(student);</span>
+<span class="fc" id="L26">        System.out.println(&quot;Student added: &quot; + student.getName());</span>
+<span class="fc" id="L27">    }</span>
+
+    // Add Course
+    public void addCourse(Course course) {
+<span class="fc" id="L31">        courses.add(course);</span>
+<span class="fc" id="L32">        System.out.println(&quot;Course added: &quot; + course.getCourseName());</span>
+<span class="fc" id="L33">    }</span>
+
+    // Add Teacher
+    public void addTeacher(Teacher teacher) {
+<span class="fc" id="L37">        teachers.add(teacher);</span>
+<span class="fc" id="L38">        System.out.println(&quot;Teacher added: &quot; + teacher.getName());</span>
+<span class="fc" id="L39">    }</span>
+
+    // Enroll student in a course
+    public void enrollStudent(Student student, Course course) {
+<span class="fc" id="L43">        Enrollment enrollment = new Enrollment(student, course);</span>
+<span class="fc" id="L44">        enrollments.add(enrollment);</span>
+<span class="fc" id="L45">        System.out.println(student.getName() + &quot; enrolled in &quot; + course.getCourseName());</span>
+<span class="fc" id="L46">    }</span>
+
+    // Assign grade
+    public void assignGrade(Student student, Course course, double marks) {
+<span class="fc" id="L50">        Grade grade = new Grade(student, course, marks);</span>
+<span class="fc" id="L51">        grades.add(grade);</span>
+<span class="fc" id="L52">        System.out.println(&quot;Grade assigned to &quot; + student.getName() + &quot; in &quot; + course.getCourseName() + &quot;: &quot; + grade.getGradeLetter());</span>
+<span class="fc" id="L53">    }</span>
+
+    // Display all students
+    public void displayAllStudents() {
+<span class="fc" id="L57">        System.out.println(&quot;\n=== All Students ===&quot;);</span>
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        for (Student s : students) {</span>
+<span class="fc" id="L59">            System.out.println(s);</span>
+        }
+<span class="fc" id="L61">    }</span>
+
+    // Display all courses
+    public void displayAllCourses() {
+<span class="fc" id="L65">        System.out.println(&quot;\n=== All Courses ===&quot;);</span>
+<span class="fc bfc" id="L66" title="All 2 branches covered.">        for (Course c : courses) {</span>
+<span class="fc" id="L67">            System.out.println(c);</span>
+        }
+<span class="fc" id="L69">    }</span>
+
+    // Simple demo method
+    public void runDemo() {
+<span class="fc" id="L73">        System.out.println(&quot;=== Student Management System Demo Started ===\n&quot;);</span>
+<span class="fc" id="L74">        displayAllStudents();</span>
+<span class="fc" id="L75">        displayAllCourses();</span>
+<span class="fc" id="L76">        System.out.println(&quot;\n=== Demo Completed ===&quot;);</span>
+<span class="fc" id="L77">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>
